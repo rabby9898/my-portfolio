@@ -17,7 +17,10 @@ import {
 } from "react-icons/si";
 const Skills = () => {
   return (
-    <div className="w-full md:w-[800px] lg:w-[1280px] px-5 md:px-10 lg:px-20 py-10 mx-auto">
+    <div
+      id="skills"
+      className="w-full md:w-[800px] lg:w-[1280px] px-5 md:px-10 lg:px-20 py-10 mx-auto"
+    >
       <h1 className="text-6xl text-gray-700 mx-auto text-center py-20">
         My Top <span className="font-light text-black">Skills</span>
       </h1>

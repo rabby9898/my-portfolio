@@ -28,7 +28,7 @@ const Navbar = () => {
             isPending ? "pending" : isActive ? "text-black font-semibold" : ""
           }
         >
-          <Link to="/" spy={true} smooth={true} offset={50} duration={500}>
+          <Link to="home" spy={true} smooth={true} offset={50} duration={500}>
             Home
           </Link>
         </NavLink>
@@ -50,7 +50,7 @@ const Navbar = () => {
             isPending ? "pending" : isActive ? "text-black font-semibold" : ""
           }
         >
-          <Link to="skill" spy={true} smooth={true} offset={50} duration={500}>
+          <Link to="skills" spy={true} smooth={true} offset={50} duration={500}>
             Skills
           </Link>
         </NavLink>
