@@ -1,6 +1,25 @@
+import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
+  // navbar fixed
+  const [isNavbarFixed, setIsNavbarFixed] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      setIsNavbarFixed(scrollPosition > 0);
+    };
+
+    // Attach the event listener when the component mounts
+    window.addEventListener("scroll", handleScroll);
+
+    // Detach the event listener when the component unmounts
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   const links = (
     <>
       <li className="mr-6">
@@ -75,9 +94,17 @@ const Navbar = () => {
       </li>
     </>
   );
+
+  //   navbar fixed
+
   return (
     <div>
-      <div className="navbar bg-transparent py-3 hover:backdrop-blur-md hover:bg-white/30">
+      <div
+        className={`navbar bg-transparent py-3 ${
+          isNavbarFixed &&
+          "fixed top-0 left-0 w-full backdrop-blur-3xl bg-white/90"
+        }`}
+      >
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
