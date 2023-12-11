@@ -1,0 +1,35 @@
+.animated-ring {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .animated-ring img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+      border: 0.2rem solid transparent;
+    }
+    100% {
+      transform: rotate(360deg);
+      border: 0.2rem solid #474747; /* Change the color of the border */
+    }
+  }
+  
+  .animated-ring::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    box-sizing: border-box;
+    animation: rotate 4s linear infinite;
+    border-radius: 50%;
+  }
+  
