@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
-
+import { Link } from "react-scroll";
 const Navbar = () => {
   // navbar fixed
   const [isNavbarFixed, setIsNavbarFixed] = useState(false);
@@ -24,72 +24,103 @@ const Navbar = () => {
     <>
       <li className="mr-6">
         <NavLink
-          to="/"
           className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "text-black font-semibold" : ""
           }
         >
-          Home
+          <Link to="/" spy={true} smooth={true} offset={50} duration={500}>
+            Home
+          </Link>
         </NavLink>
       </li>
       <li className="mr-6">
         <NavLink
-          to="#"
           className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "text-black font-semibold" : ""
           }
         >
-          About
+          <Link to="about" spy={true} smooth={true} offset={50} duration={500}>
+            About
+          </Link>
         </NavLink>
       </li>
       <li className="mr-6">
         <NavLink
-          to="#"
           className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "text-black font-semibold" : ""
           }
         >
-          Skills
+          <Link to="skill" spy={true} smooth={true} offset={50} duration={500}>
+            Skills
+          </Link>
         </NavLink>
       </li>
       <li className="mr-6">
         <NavLink
-          to="#"
           className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "text-black font-semibold" : ""
           }
         >
-          Educations
+          <Link
+            to="education"
+            spy={true}
+            smooth={true}
+            offset={50}
+            duration={500}
+          >
+            Education
+          </Link>
         </NavLink>
       </li>
       <li className="mr-6">
         <NavLink
-          to="#"
           className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "text-black font-semibold" : ""
           }
         >
-          Experiences
+          <Link
+            to="experience"
+            spy={true}
+            smooth={true}
+            offset={50}
+            duration={500}
+          >
+            Experience
+          </Link>
         </NavLink>
       </li>
       <li className="mr-6">
         <NavLink
-          to="#"
           className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "text-black font-semibold" : ""
           }
         >
-          Projects
+          <Link
+            to="projects"
+            spy={true}
+            smooth={true}
+            offset={50}
+            duration={500}
+          >
+            Projects
+          </Link>
         </NavLink>
       </li>
       <li className="mr-6">
         <NavLink
-          to="#"
           className={({ isActive, isPending }) =>
             isPending ? "pending" : isActive ? "text-black font-semibold" : ""
           }
         >
-          Contact
+          <Link
+            to="contact"
+            spy={true}
+            smooth={true}
+            offset={50}
+            duration={500}
+          >
+            Contact
+          </Link>
         </NavLink>
       </li>
     </>

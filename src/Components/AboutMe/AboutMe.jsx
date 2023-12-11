@@ -1,7 +1,7 @@
 import aboutSvg from "../../assets/abootme.svg";
 const AboutMe = () => {
   return (
-    <>
+    <div id="about">
       <div className="divider"></div>
       <div className="w-full md:w-[800px] lg:w-[1280px] px-5 md:px-10 lg:px-20 py-5 flex justify-between gap-5 md:10 lg:gap-20 items-center mx-auto">
         <div className="w-1/2">
@@ -25,7 +25,7 @@ const AboutMe = () => {
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 

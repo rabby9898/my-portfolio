@@ -5,7 +5,10 @@ import img2 from "../../assets/Chittagong_Cantonment_Public_College_seal.png";
 import img3 from "../../assets/Bangladesh_Military_Academy_Monogram.svg";
 const Education = () => {
   return (
-    <div className="w-full md:w-[800px] lg:w-[1280px] px-5 md:px-10 lg:px-20 py-10 mx-auto">
+    <div
+      id="education"
+      className="w-full md:w-[800px] lg:w-[1280px] px-5 md:px-10 lg:px-20 py-10 mx-auto"
+    >
       <div className="flex justify-center items-center gap-1 text-6xl py-8 mb-20">
         <FaGraduationCap />
         <h1>Education</h1>
