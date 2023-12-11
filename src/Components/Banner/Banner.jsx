@@ -21,13 +21,13 @@ const Banner = () => {
     await console.log(container);
   }, []);
   return (
-    <div className="py-10 h-[600px] relative">
+    <div className="w-full py-20 h-[700px] relative">
       <div className="avatar flex justify-center mx-auto">
         <div className="w-44 rounded-full border bg-white border-gray-600 animated-ring">
           <img src={BannerImg} alt="Avatar" />
         </div>
       </div>
-      <div className="text-center mt-8">
+      <div className="text-center mt-16">
         <h1 className="my-5 text-black font-bold text-4xl">Md Fajle Rabby</h1>
         <div>
           <TypeAnimation
@@ -48,7 +48,7 @@ const Banner = () => {
         <h5 className="my-5  font-semibold text-gray-500 text-xl">
           I am Currently studying
         </h5>
-        <button className="bg-gray-800 text-white px-8 py-4 my-5  text-lg rounded-md">
+        <button className="bg-gray-800 text-white px-8 py-4 my-10  text-lg rounded-md">
           <a
             href="../../assets/Resume/Assignment-02.pdf"
             download="Assignment-02.pdf"
@@ -63,7 +63,7 @@ const Banner = () => {
         id="tsparticles"
         init={particlesInit}
         loaded={particlesLoaded}
-        className="h-[600px] top-0 absolute"
+        className="w-full h-[700px] top-0 absolute"
         options={{
           background: {
             color: {
