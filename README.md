@@ -1,8 +1,5 @@
-# React + Vite
+# Portfolio : https://fajle-rabby-portfolio.web.app/
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# About My Portfolio
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Strategically structured portfolio site featuring sections like About Me, Education, Skills, Experience, Projects, and Contact. Utilizes React components for a seamless and dynamic user experience. Demonstrates proficiency in MERN stack with an eye-catching design and a comprehensive representation of skills and achievements.
