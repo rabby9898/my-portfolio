@@ -1,14 +1,43 @@
+import emailjs from "@emailjs/browser";
+import { useRef } from "react";
 const Contact = () => {
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_0xydd34",
+        "template_6z86ap6",
+        form.current,
+        "-HF9Akk-CcVhep_e3"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+  };
+
   return (
-    <div>
-      <div className="flex min-h-screen items-center justify-start bg-white">
+    <div className="w-full md:w-[800px] lg:w-[1280px] px-5 md:px-10 lg:px-20 py-10 mx-auto">
+      <div className="flex h-full py-20 items-center justify-start bg-white">
         <div className="mx-auto w-full max-w-lg">
           <h1 className="text-4xl font-medium">Contact us</h1>
           <p className="mt-3">
             Email us at help@domain.com or message us here:
           </p>
 
-          <form action="https://api.web3forms.com/submit" className="mt-10">
+          <form
+            ref={form}
+            onSubmit={sendEmail}
+            action="https://api.web3forms.com/submit"
+            className="mt-10"
+          >
             <input
               type="hidden"
               name="access_key"
@@ -18,7 +47,7 @@ const Contact = () => {
               <div className="relative z-0">
                 <input
                   type="text"
-                  name="name"
+                  name="from_name"
                   className="peer block w-full appearance-none border-0 border-b border-gray-500 bg-transparent py-2.5 px-0 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0"
                   placeholder=" "
                 />

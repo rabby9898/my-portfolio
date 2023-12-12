@@ -9,7 +9,7 @@ const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
-        loader: () => fetch("../../../public/projects.json"),
+        loader: () => fetch("/projects.json"),
       },
     ],
   },
