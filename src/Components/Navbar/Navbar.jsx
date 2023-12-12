@@ -168,7 +168,14 @@ const Navbar = () => {
               {links}
             </ul>
           </div>
-          <a className="btn btn-ghost text-xl">Fajle Rabby</a>
+
+          <Link to="home" spy={true} smooth={true} offset={50} duration={500}>
+            <img
+              className="w-[150px]"
+              src="https://i.ibb.co/D8knsQv/logo.png"
+              alt=""
+            />
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu-horizontal px-1 text-[#474747] ">{links}</ul>
