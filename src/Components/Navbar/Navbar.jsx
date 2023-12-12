@@ -50,17 +50,6 @@ const Navbar = () => {
             isPending ? "pending" : isActive ? "text-black font-semibold" : ""
           }
         >
-          <Link to="skills" spy={true} smooth={true} offset={50} duration={500}>
-            Skills
-          </Link>
-        </NavLink>
-      </li>
-      <li className="mr-6">
-        <NavLink
-          className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "text-black font-semibold" : ""
-          }
-        >
           <Link
             to="education"
             spy={true}
@@ -72,6 +61,18 @@ const Navbar = () => {
           </Link>
         </NavLink>
       </li>
+      <li className="mr-6">
+        <NavLink
+          className={({ isActive, isPending }) =>
+            isPending ? "pending" : isActive ? "text-black font-semibold" : ""
+          }
+        >
+          <Link to="skills" spy={true} smooth={true} offset={50} duration={500}>
+            Skills
+          </Link>
+        </NavLink>
+      </li>
+
       <li className="mr-6">
         <NavLink
           className={({ isActive, isPending }) =>
@@ -129,7 +130,7 @@ const Navbar = () => {
   //   navbar fixed
 
   return (
-    <div>
+    <div className="">
       <div
         className={`navbar bg-transparent py-3 ${
           isNavbarFixed &&
@@ -156,7 +157,7 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content text-[#474747]"
+              className="menu menu-sm dropdown-content text-[#474747] "
             >
               {links}
             </ul>
@@ -164,7 +165,7 @@ const Navbar = () => {
           <a className="btn btn-ghost text-xl">Fajle Rabby</a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu-horizontal px-1 text-[#474747]">{links}</ul>
+          <ul className="menu-horizontal px-1 text-[#474747] ">{links}</ul>
         </div>
         <div className="navbar-end">
           <a className="btn">Button</a>

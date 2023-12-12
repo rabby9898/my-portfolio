@@ -56,7 +56,7 @@ const Projects = () => {
                 </div>
               </div>
               <img
-                className="absolute z-0 mx-72 -my-60 left-[12rem] h-64 w-[300px] object-cover object-top hover:bg-opacity-50 transform hover:scale-125 border-gray-600 border border-opacity-50 rounded-xl shadow-lg transition-all duration-150"
+                className="absolute z-50 mx-72 -my-60 left-[12rem] h-64 w-[300px] object-cover object-top hover:bg-opacity-50 transform hover:scale-125 border-gray-600 border border-opacity-50 rounded-xl shadow-lg transition-all duration-150"
                 src={project.image}
               ></img>
             </div>
