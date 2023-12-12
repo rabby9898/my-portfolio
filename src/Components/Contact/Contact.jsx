@@ -33,6 +33,8 @@ const Contact = () => {
 
   return (
     <div
+      data-aos="fade-up"
+      data-aos-duration="3000"
       id="contact"
       className="w-full md:w-[800px] lg:w-[1280px] px-0 md:px-10 lg:px-20 py-10 mx-auto"
     >

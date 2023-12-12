@@ -4,14 +4,22 @@ const AboutMe = () => {
     <div id="about">
       <div className="divider"></div>
       <div className="w-full md:w-[800px] lg:w-[1280px] px-5 md:px-10 lg:px-20 py-5 flex flex-col md:flex-row md:justify-between gap-5 md:10 lg:gap-20 items-center mx-auto">
-        <div className="w-full md:w-1/2">
+        <div
+          className="w-full md:w-1/2"
+          data-aos="fade-right"
+          data-aos-duration="2000"
+        >
           <img
             className="w-full h-[450px] md:h-[700px]"
             src={aboutSvg}
             alt=""
           />
         </div>
-        <div className="w-full md:w-1/2">
+        <div
+          className="w-full md:w-1/2"
+          data-aos="fade-left"
+          data-aos-duration="2000"
+        >
           <div className="w-full border border-white bg-white rounded-sm">
             <h1 className="text-3xl md:text-5xl font-bold text-gray-900 uppercase my-2 md:my-6 text-center">
               About <span className="font-normal text-gray-600">Me</span>

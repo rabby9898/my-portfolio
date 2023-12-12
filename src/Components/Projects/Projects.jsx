@@ -6,6 +6,8 @@ const Projects = () => {
 
   return (
     <div
+      data-aos="fade-down"
+      data-aos-duration="3000"
       id="projects"
       className="w-full md:w-[800px] lg:w-[1280px] px-5 md:px-10 lg:px-20 py-5 md:py-10 mx-auto"
     >

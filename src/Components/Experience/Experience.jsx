@@ -3,6 +3,8 @@ import { FaCircleDot } from "react-icons/fa6";
 const Experience = () => {
   return (
     <div
+      data-aos="zoom-in-down "
+      data-aos-duration="2000"
       id="experience"
       className="w-full md:w-[800px] lg:w-[1280px] px-5 md:px-10 lg:px-20 py-10 mx-auto"
     >
