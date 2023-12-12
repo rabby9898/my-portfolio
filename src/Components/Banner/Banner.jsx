@@ -45,8 +45,9 @@ const Banner = () => {
             repeat={Infinity}
           />
         </div>
-        <h5 className="my-5  font-semibold text-gray-500 text-xl">
-          I am Currently studying
+        <h5 className="my-5 font-semibold text-gray-500 text-lg text-center w-full md:w-[600px] mx-auto">
+          Passionate Frontend developer creating user-friendly web experiences,
+          dedicated to continuous learning and professional growth.
         </h5>
         <button className="bg-gray-800 text-white px-8 py-4 my-10  text-lg rounded-md">
           <a

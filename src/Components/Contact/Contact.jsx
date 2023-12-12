@@ -34,9 +34,9 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="w-full md:w-[800px] lg:w-[1280px] px-5 md:px-10 lg:px-20 py-10 mx-auto"
+      className="w-full md:w-[800px] lg:w-[1280px] px-0 md:px-10 lg:px-20 py-10 mx-auto"
     >
-      <div className="flex h-full py-20 items-center justify-start bg-white">
+      <div className="flex px-5 h-full py-20 items-center justify-start bg-white">
         <div className="mx-auto w-full max-w-lg">
           <h1 className="text-4xl font-medium">Contact us</h1>
           <p className="mt-3">Message us here:</p>

@@ -95,7 +95,7 @@ const Footer = () => {
                 <span className="sr-only">Dribbble account</span>
               </a>
             </div>
-            <div>
+            <div className="mt-5 md:mt-0">
               <button className="btn btn-square btn-outline">
                 <Link
                   to="home"

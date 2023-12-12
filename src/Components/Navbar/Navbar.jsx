@@ -1,10 +1,16 @@
 import { useEffect, useState } from "react";
+import { FaLightbulb } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import { Link } from "react-scroll";
+import { MdDarkMode } from "react-icons/md";
 const Navbar = () => {
   // navbar fixed
   const [isNavbarFixed, setIsNavbarFixed] = useState(false);
+  const [clicked, setClicked] = useState(false);
 
+  const handleClick = () => {
+    setClicked(!clicked);
+  };
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
@@ -168,7 +174,13 @@ const Navbar = () => {
           <ul className="menu-horizontal px-1 text-[#474747] ">{links}</ul>
         </div>
         <div className="navbar-end">
-          <a className="btn">Button</a>
+          <button onClick={handleClick} className="text-3xl">
+            {clicked ? (
+              <FaLightbulb className="text-yellow-400"></FaLightbulb>
+            ) : (
+              <MdDarkMode />
+            )}
+          </button>
         </div>
       </div>
     </div>

@@ -7,17 +7,17 @@ const Projects = () => {
   return (
     <div
       id="projects"
-      className="w-full md:w-[800px] lg:w-[1280px] px-5 md:px-10 lg:px-20 py-10 mx-auto"
+      className="w-full md:w-[800px] lg:w-[1280px] px-5 md:px-10 lg:px-20 py-5 md:py-10 mx-auto"
     >
-      <div className="flex justify-center items-center gap-1 text-6xl py-8 mb-20">
+      <div className="flex justify-center items-center gap-1 text-3xl md:text-6xl py-8 mb-20">
         <h1>My Projects</h1>
       </div>
 
       {projectsLoad.map((project) => (
         <div key={project.id}>
-          <div className="flex w-full h-full antialiased my-16 mx-auto">
+          <div className="flex w-full h-full antialiased my-5 md:my-16 mx-auto">
             <div className="relative mx-auto">
-              <div className="z-50 p-6 w-[500px] mr-[17rem] mt-10 mx-auto grid grid-cols-1 cursor-default select-none rounded dark:bg-gray-900 shadow-lg">
+              <div className="z-50 p-6 w-full md:w-[500px] mr-0 md:mr-[17rem] mt-0 md:mt-10 mx-auto grid grid-cols-1 cursor-default select-none rounded dark:bg-gray-900 shadow-lg">
                 <div className="font-semibold text-xl mb-2 ml-2 text-gray-900 dark:text-white">
                   {project.name}
                 </div>
@@ -56,7 +56,7 @@ const Projects = () => {
                 </div>
               </div>
               <img
-                className="absolute z-50 mx-72 -my-60 left-[12rem] h-64 w-[300px] object-cover object-top hover:bg-opacity-50 transform hover:scale-125 border-gray-600 border border-opacity-50 rounded-xl shadow-lg transition-all duration-150"
+                className="absolute hidden md:flex z-50 mx-1 md:mx-72 -my-57 bottom-0 left-0 md:left-[12rem] h-64 w-full md:w-[300px] object-cover object-top hover:bg-opacity-50 transform hover:scale-125 border-gray-600 border border-opacity-50 rounded-xl shadow-lg transition-all duration-150"
                 src={project.image}
               ></img>
             </div>

@@ -9,7 +9,7 @@ const Education = () => {
       id="education"
       className="w-full md:w-[800px] lg:w-[1280px] px-5 md:px-10 lg:px-20 py-10 mx-auto"
     >
-      <div className="flex justify-center items-center gap-1 text-6xl py-8 mb-20">
+      <div className="flex justify-center items-center gap-1 text-3xl md:text-6xl py-8 mb-20">
         <FaGraduationCap />
         <h1>Education</h1>
       </div>
@@ -19,7 +19,7 @@ const Education = () => {
             <div className="timeline-middle">
               <FaCircleDot className="text-gray-600 text-xl" />
             </div>
-            <div className="timeline-end md:text-start text-right -mt-5 ml-5">
+            <div className="timeline-end md:text-start -mt-5 ml-5">
               <div className="relative flex w-full  flex-col rounded-xl bg-transparent bg-clip-border text-gray-700 shadow-none">
                 <div className="relative gap-4 pt-0 pb-8 mx-0 overflow-hidden text-gray-700 bg-transparent shadow-none rounded-xl bg-clip-border">
                   <img
@@ -50,7 +50,7 @@ const Education = () => {
             <div className="timeline-middle">
               <FaCircleDot className="text-gray-600 text-xl" />
             </div>
-            <div className="timeline-start md:text-end text-right -mt-5 mr-5">
+            <div className="timeline-start md:text-end -mt-5 mr-5">
               <div className="relative flex w-full  flex-col rounded-xl bg-transparent bg-clip-border text-gray-700 shadow-none">
                 <div className="relative gap-4 pt-0 pb-8 mx-0 overflow-hidden text-gray-700 bg-transparent shadow-none rounded-xl bg-clip-border">
                   <img

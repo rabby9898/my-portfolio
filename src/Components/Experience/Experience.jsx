@@ -6,7 +6,7 @@ const Experience = () => {
       id="experience"
       className="w-full md:w-[800px] lg:w-[1280px] px-5 md:px-10 lg:px-20 py-10 mx-auto"
     >
-      <h1 className="text-6xl text-gray-700 mx-auto text-center py-20">
+      <h1 className="text-3xl md:text-6xl text-gray-700 mx-auto text-center py-20">
         My Experiences <span className="font-light text-black"></span>
       </h1>
       <div>
@@ -15,9 +15,9 @@ const Experience = () => {
             <div className="timeline-middle">
               <FaCircleDot className="text-gray-600 text-xl" />
             </div>
-            <div className="timeline-start md:text-start text-right -mt-5 mr-5">
-              <div className="relative flex bg-clip-border rounded-xl bg-white text-gray-700 shadow-md w-full max-w-[48rem] flex-row">
-                <div className="relative w-2/5 m-0 overflow-hidden text-gray-700 bg-white rounded-r-none bg-clip-border rounded-xl shrink-0">
+            <div className="timeline-start md:text-start text-left mt-5 md:-mt-5 mr-0 md:mr-5">
+              <div className="relative flex bg-clip-border rounded-xl bg-white text-gray-700 shadow-md w-full max-w-[48rem] flex-col md:flex-row ">
+                <div className="relative w-full md:w-2/5 m-0 overflow-hidden text-gray-700 bg-white rounded-r-none bg-clip-border rounded-xl shrink-0">
                   <img
                     src="https://i.ibb.co/gFTzDc1/screenshot-hotel-sharif-netlify-app-2023-12-12-00-58-13.png"
                     alt="card-image"
@@ -48,9 +48,9 @@ const Experience = () => {
             <div className="timeline-middle">
               <FaCircleDot className="text-gray-600 text-xl" />
             </div>
-            <div className="timeline-end md:text-start text-right -mt-5 mr-5">
-              <div className="relative flex bg-clip-border rounded-xl bg-white text-gray-700 shadow-md w-full max-w-[48rem] flex-row">
-                <div className="relative w-2/5 m-0 overflow-hidden text-gray-700 bg-white rounded-r-none bg-clip-border rounded-xl shrink-0">
+            <div className="timeline-end md:text-start text-left mt-5 md:-mt-5 mr-0 md:mr-5">
+              <div className="relative flex bg-clip-border rounded-xl bg-white text-gray-700 shadow-md w-full max-w-[48rem] flex-col md:flex-row">
+                <div className="relative w-full md:w-2/5 m-0 overflow-hidden text-gray-700 bg-white rounded-r-none bg-clip-border rounded-xl shrink-0">
                   <img
                     src="https://i.ibb.co/cgpY3dF/screenshot-reef-techno-web-app-2023-12-12-00-59-33.png"
                     alt="card-image"
