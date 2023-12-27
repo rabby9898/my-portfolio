@@ -20,8 +20,12 @@ const Banner = () => {
   const particlesLoaded = useCallback(async (container) => {
     await console.log(container);
   }, []);
+
+  const handleClick = () => {
+    console.log("Clicked resume");
+  };
   return (
-    <div className="w-full md:w-[800px] lg:w-[1280px] px-5 md:px-10 lg:px-20 py-5 md:py-10 mx-auto">
+    <div className="w-full py-5 md:py-10 mx-auto">
       <div className="w-full py-20 h-[700px] relative">
         <div
           data-aos="fade-down"
@@ -32,7 +36,7 @@ const Banner = () => {
             <img src={BannerImg} alt="Avatar" />
           </div>
         </div>
-        <div className="text-center mt-16">
+        <div className="relative text-center mt-16 z-10">
           <h1 className="my-5 text-black font-bold text-4xl">Md Fajle Rabby</h1>
           <div>
             <TypeAnimation
@@ -61,7 +65,7 @@ const Banner = () => {
           </h5>
           <button className="bg-gray-800 text-white px-8 py-4 my-10  text-lg rounded-md">
             <a
-              href="../../assets/Resume/Assignment-02.pdf"
+              href="../../assets/Resume/Resume-Fajle-Rabby.pdf"
               download="Assignment-02.pdf"
             >
               <div className="flex justify-center items-center gap-2">

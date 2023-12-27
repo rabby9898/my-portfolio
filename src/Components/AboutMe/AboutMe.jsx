@@ -6,7 +6,7 @@ const AboutMe = () => {
       <div className="w-full md:w-[800px] lg:w-[1280px] px-5 md:px-10 lg:px-20 py-5 flex flex-col md:flex-row md:justify-between gap-5 md:10 lg:gap-20 items-center mx-auto">
         <div
           className="w-full md:w-1/2"
-          data-aos="fade-right"
+          data-aos="fade-down"
           data-aos-duration="2000"
         >
           <img
@@ -17,7 +17,7 @@ const AboutMe = () => {
         </div>
         <div
           className="w-full md:w-1/2"
-          data-aos="fade-left"
+          data-aos="fade-up"
           data-aos-duration="2000"
         >
           <div className="w-full border border-white bg-white rounded-sm">

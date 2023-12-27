@@ -1,4 +1,4 @@
-import { FaArrowCircleUp, FaArrowUp, FaLinkedin } from "react-icons/fa";
+import { FaArrowUp, FaLinkedin } from "react-icons/fa";
 import { Link } from "react-scroll";
 
 const Footer = () => {

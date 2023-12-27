@@ -15,7 +15,7 @@ const Education = () => {
       </div>
       <div>
         <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
-          <li data-aos="fade-left" data-aos-duration="2000">
+          <li data-aos="fade-up" data-aos-duration="2000">
             <div className="timeline-middle">
               <FaCircleDot className="text-gray-600 text-xl" />
             </div>
@@ -46,7 +46,7 @@ const Education = () => {
             </div>
             <hr className="" />
           </li>
-          <li data-aos="fade-right" data-aos-duration="2000">
+          <li data-aos="fade-up" data-aos-duration="2000">
             <div className="timeline-middle">
               <FaCircleDot className="text-gray-600 text-xl" />
             </div>
@@ -76,7 +76,7 @@ const Education = () => {
             </div>
             <hr />
           </li>
-          <li data-aos="fade-left" data-aos-duration="2000">
+          <li data-aos="fade-down" data-aos-duration="2000">
             <div className="timeline-middle">
               <FaCircleDot className="text-gray-600 text-xl" />
             </div>
