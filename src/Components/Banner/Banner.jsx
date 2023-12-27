@@ -66,7 +66,7 @@ const Banner = () => {
           <button className="bg-gray-800 text-white px-8 py-4 my-10  text-lg rounded-md">
             <a
               href="../../assets/Resume/Resume-Fajle-Rabby.pdf"
-              download="Assignment-02.pdf"
+              download="Resume-Fajle-Rabby.pdf"
             >
               <div className="flex justify-center items-center gap-2">
                 <FaDownload /> Download Resume
