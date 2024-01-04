@@ -17,7 +17,7 @@ const Projects = () => {
 
       {projectsLoad.map((project) => (
         <div key={project.id}>
-          <div className="flex w-full h-full antialiased my-5 md:my-16 mx-auto">
+          <div className="flex w-full h-[500px] antialiased my-5 md:my-8 mx-auto">
             <div className="relative mx-auto">
               <div className="z-50 p-6 w-full md:w-[400px] lg:w-[500px] mr-0 md:mr-[17rem] mt-0 md:mt-10 mx-0 lg:mx-auto grid grid-cols-1 cursor-default select-none rounded dark:bg-gray-900 shadow-lg">
                 <div className="font-semibold text-xl mb-2 ml-2 text-gray-900 dark:text-white">
@@ -31,10 +31,8 @@ const Projects = () => {
                     <Link to={project.githubLink}>Github Link</Link>
                   </button>
                 </div>
-                <div className="my-2 mx-2 mr-5">
-                  <p className="text-white md:text-gray-900 text-sm">
-                    {project.description}
-                  </p>
+                <div className="my-2 mx-2 mr-5 ">
+                  <p className="text-gray-900 text-sm">{project.description}</p>
                 </div>
                 <div>
                   <div className="font-semibold text-l text-gray-900">

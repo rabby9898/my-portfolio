@@ -22,7 +22,7 @@ const Experience = () => {
               <div className="relative flex bg-clip-border rounded-xl bg-white text-gray-700 shadow-md w-full max-w-[48rem] flex-col md:flex-row">
                 <div className="relative w-full md:w-2/5 m-0 overflow-hidden text-gray-700 bg-white rounded-r-none bg-clip-border rounded-xl shrink-0">
                   <img
-                    src="https://ibb.co/WB5mtxP"
+                    src="https://i.ibb.co/vLq0YwQ/travel-nest-projects.png"
                     alt="card-image"
                     className="object-cover w-full h-full"
                   />
