@@ -7,6 +7,7 @@ import { useCallback } from "react";
 import Particles from "react-tsparticles";
 //import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
 import { loadSlim } from "tsparticles-slim";
+import resume from "../../assets/Resume/resume-fajle-rabby.pdf";
 const Banner = () => {
   const particlesInit = useCallback(async (engine) => {
     console.log(engine);
@@ -21,9 +22,6 @@ const Banner = () => {
     await console.log(container);
   }, []);
 
-  const handleClick = () => {
-    console.log("Clicked resume");
-  };
   return (
     <div className="w-full py-5 md:py-10 mx-auto">
       <div className="w-full py-20 h-[700px] relative">
@@ -64,10 +62,7 @@ const Banner = () => {
             growth.
           </h5>
           <button className="bg-gray-800 text-white px-8 py-4 my-10  text-lg rounded-md">
-            <a
-              href="../../assets/Resume/Resume-Fajle-Rabby.pdf"
-              download="Resume-Fajle-Rabby.pdf"
-            >
+            <a href={resume} download="resume-fajle-rabby.pdf">
               <div className="flex justify-center items-center gap-2">
                 <FaDownload /> Download Resume
               </div>
