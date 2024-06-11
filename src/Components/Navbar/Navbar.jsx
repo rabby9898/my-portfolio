@@ -138,7 +138,7 @@ const Navbar = () => {
   return (
     <div data-aos="fade-down" className="">
       <div
-        className={`navbar bg-transparent py-3 ${
+        className={`navbar bg-transparent py-4 px-5 md:px-10 lg:px-20 z-50 ${
           isNavbarFixed &&
           "fixed top-0 left-0 w-full backdrop-blur-3xl bg-white/90"
         }`}
