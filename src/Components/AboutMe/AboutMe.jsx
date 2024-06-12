@@ -9,11 +9,7 @@ const AboutMe = () => {
           data-aos="fade-down"
           data-aos-duration="2000"
         >
-          <img
-            className="w-full h-[450px] md:h-[700px]"
-            src={aboutSvg}
-            alt=""
-          />
+          <img className="w-full h-auto " src={aboutSvg} alt="" />
         </div>
         <div
           className="w-full md:w-1/2"
@@ -21,7 +17,7 @@ const AboutMe = () => {
           data-aos-duration="2000"
         >
           <div className="w-full border border-white bg-white rounded-sm">
-            <h1 className="text-3xl md:text-5xl font-bold text-gray-900 uppercase my-2 md:my-6 text-center">
+            <h1 className="text-3xl md:text-5xl font-bold text-gray-900 uppercase my-2 text-center">
               About <span className="font-normal text-gray-600">Me</span>
             </h1>
             <p className="text-base md:text-lg text-gray-400 p-10 text-justify">

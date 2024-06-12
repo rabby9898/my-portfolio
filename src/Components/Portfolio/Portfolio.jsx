@@ -17,7 +17,7 @@ const Portfolio = () => {
       id: "page1",
       label: "Full Stack(MERN)",
       content: (
-        <div className="grid grid-cols-2 gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-16">
           <Connectify />
           <Eclick />
           <DeltaTranslate />
@@ -29,7 +29,7 @@ const Portfolio = () => {
       id: "page2",
       label: "Frontend",
       content: (
-        <div className="grid grid-cols-2 gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-16">
           <HotelSharif />
           <CareerHub />
           <EasyCart />
@@ -40,7 +40,7 @@ const Portfolio = () => {
       id: "page3",
       label: "Backend",
       content: (
-        <div className="grid grid-cols-2 gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-0 md:gap-16">
           <ReefTechno />
         </div>
       ),
@@ -61,11 +61,11 @@ const Portfolio = () => {
   ];
 
   return (
-    <div className="" id="projects">
-      <div className="flex justify-center items-center gap-1 text-3xl md:text-6xl py-8 mb-20">
+    <div className="mt-5 md:mt-16" id="projects">
+      <div className="flex justify-center items-center gap-1 text-3xl md:text-6xl py-5 md:py-10 mb-20">
         <h1>My Projects</h1>
       </div>
-      <ul className="grid grid-flow-col w-[600px] text-center text-gray-200 bg-[#1f2937] rounded-xl border mx-auto">
+      <ul className="grid grid-flow-col w-full md:w-[600px] text-center text-gray-200 bg-[#1f2937] rounded-xl border mx-auto">
         {tabs.map((tab) => (
           <li key={tab.id}>
             <a
