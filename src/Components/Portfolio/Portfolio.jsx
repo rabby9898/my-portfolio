@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import {
   CareerHub,
   Connectify,
@@ -9,6 +9,7 @@ import {
   ReefTechno,
   TravelNest,
 } from "./PortfolioCards";
+import { ModeContext } from "../../Provider/DarkModeProvider";
 const Portfolio = () => {
   const [activeTab, setActiveTab] = useState("page1");
 
@@ -60,10 +61,11 @@ const Portfolio = () => {
     },
   ];
 
+  const { isDarkMode } = useContext(ModeContext);
   return (
-    <div className="mt-5 md:mt-16" id="projects">
-      <div className="flex justify-center items-center gap-1 text-3xl md:text-6xl py-5 md:py-10 mb-20">
-        <h1>My Projects</h1>
+    <div className={`${isDarkMode && "dark"} mt-5 md:mt-16" id="projects`}>
+      <div className="flex justify-center items-center gap-1 text-3xl md:text-6xl py-5 md:py-10 mb-10 dark:text-blue-400">
+        <h1 className="">My Projects</h1>
       </div>
       <ul className="grid grid-flow-col w-full md:w-[600px] text-center text-gray-200 bg-[#1f2937] rounded-xl border mx-auto">
         {tabs.map((tab) => (

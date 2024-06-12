@@ -1,16 +1,14 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import { FaLightbulb } from "react-icons/fa";
 import { NavLink } from "react-router-dom";
 import { Link } from "react-scroll";
 import { MdDarkMode } from "react-icons/md";
+import { ModeContext } from "../../Provider/DarkModeProvider";
 const Navbar = () => {
   // navbar fixed
   const [isNavbarFixed, setIsNavbarFixed] = useState(false);
-  const [clicked, setClicked] = useState(false);
+  const { toggleDarkMode, isDarkMode } = useContext(ModeContext);
 
-  const handleClick = () => {
-    setClicked(!clicked);
-  };
   useEffect(() => {
     const handleScroll = () => {
       const scrollPosition = window.scrollY;
@@ -31,7 +29,11 @@ const Navbar = () => {
       <li className="mr-6">
         <NavLink
           className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "text-black font-semibold" : ""
+            isPending
+              ? "pending"
+              : isActive
+              ? "text-black font-semibold dark:text-gray-200"
+              : ""
           }
         >
           <Link to="home" spy={true} smooth={true} offset={50} duration={500}>
@@ -42,7 +44,11 @@ const Navbar = () => {
       <li className="mr-6">
         <NavLink
           className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "text-black font-semibold" : ""
+            isPending
+              ? "pending"
+              : isActive
+              ? "text-black font-semibold dark:text-gray-200"
+              : ""
           }
         >
           <Link to="about" spy={true} smooth={true} offset={50} duration={500}>
@@ -53,7 +59,11 @@ const Navbar = () => {
       <li className="mr-6">
         <NavLink
           className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "text-black font-semibold" : ""
+            isPending
+              ? "pending"
+              : isActive
+              ? "text-black font-semibold dark:text-gray-200"
+              : ""
           }
         >
           <Link
@@ -70,7 +80,11 @@ const Navbar = () => {
       <li className="mr-6">
         <NavLink
           className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "text-black font-semibold" : ""
+            isPending
+              ? "pending"
+              : isActive
+              ? "text-black font-semibold dark:text-gray-200"
+              : ""
           }
         >
           <Link to="skills" spy={true} smooth={true} offset={50} duration={500}>
@@ -82,7 +96,11 @@ const Navbar = () => {
       <li className="mr-6">
         <NavLink
           className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "text-black font-semibold" : ""
+            isPending
+              ? "pending"
+              : isActive
+              ? "text-black font-semibold dark:text-gray-200"
+              : ""
           }
         >
           <Link
@@ -99,7 +117,11 @@ const Navbar = () => {
       <li className="mr-6">
         <NavLink
           className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "text-black font-semibold" : ""
+            isPending
+              ? "pending"
+              : isActive
+              ? "text-black font-semibold dark:text-gray-200"
+              : ""
           }
         >
           <Link
@@ -116,7 +138,11 @@ const Navbar = () => {
       <li className="mr-6">
         <NavLink
           className={({ isActive, isPending }) =>
-            isPending ? "pending" : isActive ? "text-black font-semibold" : ""
+            isPending
+              ? "pending"
+              : isActive
+              ? "text-black font-semibold dark:text-gray-200"
+              : ""
           }
         >
           <Link
@@ -136,11 +162,11 @@ const Navbar = () => {
   //   navbar fixed
 
   return (
-    <div data-aos="fade-down" className="">
+    <div className={`${isDarkMode && "dark"}`}>
       <div
-        className={`navbar bg-transparent py-4 px-5 md:px-10 lg:px-20 z-50 ${
+        className={`navbar bg-transparent py-4 px-5 md:px-10 lg:px-20 z-50 dark:bg-slate-900 ${
           isNavbarFixed &&
-          "fixed top-0 left-0 w-full backdrop-blur-3xl bg-white/90"
+          "fixed top-0 left-0 w-full backdrop-blur-3xl bg-white/90 "
         }`}
       >
         <div className="navbar-start">
@@ -168,21 +194,30 @@ const Navbar = () => {
               {links}
             </ul>
           </div>
-
-          <Link to="home" spy={true} smooth={true} offset={50} duration={500}>
-            <img
-              className="w-[150px]"
-              src="https://i.ibb.co/D8knsQv/logo.png"
-              alt=""
-            />
-          </Link>
+          {isDarkMode ? (
+            <Link to="home" spy={true} smooth={true} offset={50} duration={500}>
+              <img
+                className="w-[150px]"
+                src={`https://i.ibb.co/nRM6SsV/Fajle-Rabby-dark-removebg-preview.png`}
+                alt=""
+              />
+            </Link>
+          ) : (
+            <Link to="home" spy={true} smooth={true} offset={50} duration={500}>
+              <img
+                className="w-[150px]"
+                src={`https://i.ibb.co/q1SZCYr/Fajle-Rabby-1-removebg-preview.png`}
+                alt=""
+              />
+            </Link>
+          )}
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu-horizontal px-1 text-[#474747] ">{links}</ul>
         </div>
         <div className="navbar-end">
-          <button onClick={handleClick} className="text-3xl">
-            {clicked ? (
+          <button onClick={toggleDarkMode} className="text-3xl">
+            {isDarkMode ? (
               <FaLightbulb className="text-yellow-400"></FaLightbulb>
             ) : (
               <MdDarkMode />

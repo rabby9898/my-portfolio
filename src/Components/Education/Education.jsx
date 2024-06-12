@@ -3,25 +3,30 @@ import { FaCircleDot } from "react-icons/fa6";
 import img1 from "../../assets/Iubat-logo-300x263.png";
 import img2 from "../../assets/Chittagong_Cantonment_Public_College_seal.png";
 import img3 from "../../assets/Bangladesh_Military_Academy_Monogram.svg";
+import { ModeContext } from "../../Provider/DarkModeProvider";
+import { useContext } from "react";
 const Education = () => {
+  const { isDarkMode } = useContext(ModeContext);
   return (
     <div
       id="education"
-      className="w-full md:w-[800px] lg:w-[1280px] px-5 md:px-10 lg:px-20 py-10 mx-auto"
+      className={`${
+        isDarkMode && "dark"
+      } w-full md:w-[800px] lg:w-[1280px] px-5 md:px-10 lg:px-20 py-10 mx-auto`}
     >
-      <div className="flex justify-center items-center gap-1 text-3xl md:text-6xl py-8 mb-20">
+      <div className="flex justify-center items-center gap-1 text-3xl md:text-6xl py-8 mb-20 dark:text-blue-400">
         <FaGraduationCap />
         <h1>Education</h1>
       </div>
       <div>
-        <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical">
+        <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical ">
           <li data-aos="fade-up" data-aos-duration="2000">
             <div className="timeline-middle">
               <FaCircleDot className="text-gray-600 text-xl" />
             </div>
             <div className="timeline-end md:text-start -mt-5 ml-5">
               <div className="relative flex w-full  flex-col rounded-xl bg-transparent bg-clip-border text-gray-700 shadow-none">
-                <div className="relative gap-4 pt-0 pb-8 mx-0 overflow-hidden text-gray-700 bg-transparent shadow-none rounded-xl bg-clip-border">
+                <div className="relative gap-4 pt-0 pb-8 mx-0 overflow-hidden text-gray-700 bg-transparent shadow-none rounded-xl bg-clip-border dark:text-white">
                   <img
                     src={img1}
                     alt="IUBAT"
@@ -52,7 +57,7 @@ const Education = () => {
             </div>
             <div className="timeline-start md:text-end -mt-5 mr-5">
               <div className="relative flex w-full  flex-col rounded-xl bg-transparent bg-clip-border text-gray-700 shadow-none">
-                <div className="relative gap-4 pt-0 pb-8 mx-0 overflow-hidden text-gray-700 bg-transparent shadow-none rounded-xl bg-clip-border">
+                <div className="relative gap-4 pt-0 pb-8 mx-0 overflow-hidden text-gray-700 bg-transparent shadow-none rounded-xl bg-clip-border dark:text-white">
                   <img
                     src={img2}
                     alt="CCPC"
@@ -82,7 +87,7 @@ const Education = () => {
             </div>
             <div className="timeline-end md:text-start -mt-5 ml-5">
               <div className="relative flex w-full  flex-col rounded-xl bg-transparent bg-clip-border text-gray-700 shadow-none">
-                <div className="relative gap-4 pt-0 pb-8 mx-0 overflow-hidden text-gray-700 bg-transparent shadow-none rounded-xl bg-clip-border">
+                <div className="relative gap-4 pt-0 pb-8 mx-0 overflow-hidden text-gray-700 bg-transparent shadow-none rounded-xl bg-clip-border dark:text-white">
                   <img
                     src={img3}
                     alt="BMAHS"

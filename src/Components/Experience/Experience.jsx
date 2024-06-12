@@ -1,6 +1,10 @@
+import { useContext } from "react";
 import { FaCircleDot } from "react-icons/fa6";
+import { ModeContext } from "../../Provider/DarkModeProvider";
 
 const Experience = () => {
+  const { isDarkMode } = useContext(ModeContext);
+
   return (
     <div
       data-aos="zoom-in-down "
@@ -8,7 +12,11 @@ const Experience = () => {
       id="experience"
       className="w-full md:w-[800px] lg:w-[1280px] px-5 md:px-10 lg:px-20 py-10 mx-auto"
     >
-      <h1 className="text-3xl md:text-6xl text-gray-700 mx-auto text-center py-20">
+      <h1
+        className={`${
+          isDarkMode && "dark"
+        } text-3xl md:text-6xl text-gray-700 mx-auto text-center py-20 dark:text-blue-400`}
+      >
         My Experiences <span className="font-light text-black"></span>
       </h1>
       <div>

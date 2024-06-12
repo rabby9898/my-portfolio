@@ -1,3 +1,4 @@
+import { useContext } from "react";
 import {
   FaBootstrap,
   FaCss3,
@@ -16,16 +17,21 @@ import {
   SiMongoosedotws,
   SiTailwindcss,
 } from "react-icons/si";
+import { ModeContext } from "../../Provider/DarkModeProvider";
 const Skills = () => {
+  const { isDarkMode } = useContext(ModeContext);
   return (
     <div
       data-aos="fade-up"
       data-aos-duration="3000"
       id="skills"
-      className="w-full md:w-[800px] lg:w-[1280px] px-5 md:px-10 lg:px-20 py-10 mx-auto"
+      className={`${
+        isDarkMode && "dark"
+      } w-full md:w-[800px] lg:w-[1280px] px-5 md:px-10 lg:px-20 py-10 mx-auto`}
     >
-      <h1 className="text-3xl md:text-6xl text-gray-700 mx-auto text-left md:text-center py-5 md:py-20">
-        My Top <span className="font-light text-black">Skills</span>
+      <h1 className="text-3xl md:text-6xl text-gray-700 mx-auto text-left md:text-center py-5 md:py-20 dark:text-white">
+        My Top{" "}
+        <span className="font-light text-black dark:text-blue-400">Skills</span>
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1 md:gap-2 lg:gap-8 ">
         <div className="group w-full md:w-[300px] h-[80px] rounded-sm border-[0.5px] border-black bg-white hover:bg-[#f3f4f6]">

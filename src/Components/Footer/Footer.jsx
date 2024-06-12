@@ -1,14 +1,17 @@
+import { useContext } from "react";
 import { FaArrowUp, FaLinkedin } from "react-icons/fa";
 import { Link } from "react-scroll";
+import { ModeContext } from "../../Provider/DarkModeProvider";
 
 const Footer = () => {
+  const { isDarkMode } = useContext(ModeContext);
   return (
     <div>
-      <footer className="">
+      <footer className={`${isDarkMode && "dark"}`}>
         <div className="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
-          <hr className="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
+          <hr className="my-6 border-gray-200 sm:mx-auto  lg:my-8" />
           <div className="sm:flex sm:items-center sm:justify-between">
-            <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+            <span className="text-sm text-gray-500 sm:text-center dark:text-white">
               © 2023{" "}
               <a href="https://flowbite.com/" className="hover:underline">
                 Fajle Rabby
@@ -96,7 +99,7 @@ const Footer = () => {
               </a>
             </div>
             <div className="mt-5 md:mt-0">
-              <button className="btn btn-square btn-outline">
+              <button className="btn btn-square btn-outline dark:bg-gray-300">
                 <Link
                   to="home"
                   spy={true}

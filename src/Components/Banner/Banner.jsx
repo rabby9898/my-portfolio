@@ -3,12 +3,15 @@ import BannerImg from "../../assets/black&white.png";
 import { TypeAnimation } from "react-type-animation";
 import { FaDownload } from "react-icons/fa";
 
-import { useCallback } from "react";
+import { useCallback, useContext } from "react";
 import Particles from "react-tsparticles";
 //import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
 import { loadSlim } from "tsparticles-slim";
 import resume from "../../assets/Resume/resume-fajle-rabby.pdf";
+import { ModeContext } from "../../Provider/DarkModeProvider";
 const Banner = () => {
+  const { isDarkMode } = useContext(ModeContext);
+
   const particlesInit = useCallback(async (engine) => {
     console.log(engine);
     // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
@@ -23,7 +26,8 @@ const Banner = () => {
   }, []);
 
   return (
-    <div className="w-full py-5 md:py-10 mx-auto">
+    // <div className={}>
+    <div className={`${isDarkMode && "dark"} w-full py-5 md:py-10 mx-auto`}>
       <div className="w-full py-20 h-[700px] relative">
         <div
           data-aos="fade-down"
@@ -35,10 +39,12 @@ const Banner = () => {
           </div>
         </div>
         <div className="relative text-center mt-16 z-10">
-          <h1 className="my-5 text-black font-bold text-4xl">Md Fajle Rabby</h1>
+          <h1 className="my-5 text-black font-bold text-4xl dark:text-gray-200">
+            Md Fajle Rabby
+          </h1>
           <div>
             <TypeAnimation
-              className=" text-gray-600 font-semibold"
+              className=" text-gray-600 font-semibold dark:text-gray-200"
               preRenderFirstString={true}
               sequence={[
                 500,
@@ -55,15 +61,15 @@ const Banner = () => {
           <h5
             data-aos="fade-up"
             data-aos-duration="2000"
-            className="my-5 font-semibold text-gray-500 text-lg text-center w-full md:w-[600px] mx-auto"
+            className="my-5 font-semibold text-gray-500 text-lg text-center w-full md:w-[600px] mx-auto dark:text-gray-200"
           >
             Passionate Frontend developer creating user-friendly web
             experiences, dedicated to continuous learning and professional
             growth.
           </h5>
-          <button className="bg-gray-800 text-white px-8 py-4 my-10  text-lg rounded-md">
+          <button className="bg-gray-800 text-white px-8 py-4 my-10  text-lg rounded-md dark:border-[.75px] dark:border-white">
             <a href={resume} download="resume-fajle-rabby.pdf">
-              <div className="flex justify-center items-center gap-2">
+              <div className="flex justify-center items-center gap-2 dark:text-gray-200">
                 <FaDownload /> Download Resume
               </div>
             </a>
@@ -150,6 +156,7 @@ const Banner = () => {
         />
       </div>
     </div>
+    // </div>
   );
 };
 
