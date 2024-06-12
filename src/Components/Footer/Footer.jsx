@@ -99,17 +99,16 @@ const Footer = () => {
               </a>
             </div>
             <div className="mt-5 md:mt-0">
-              <button className="btn btn-square btn-outline dark:bg-gray-300">
-                <Link
-                  to="home"
-                  spy={true}
-                  smooth={true}
-                  offset={50}
-                  duration={500}
-                >
-                  <FaArrowUp className="text-2xl"></FaArrowUp>
-                </Link>
-              </button>
+              <Link
+                to="home"
+                spy={true}
+                smooth={true}
+                offset={50}
+                duration={500}
+                className="btn btn-square btn-outline dark:bg-gray-300"
+              >
+                <FaArrowUp className="text-2xl"></FaArrowUp>
+              </Link>
             </div>
           </div>
         </div>

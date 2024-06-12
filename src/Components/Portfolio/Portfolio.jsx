@@ -63,7 +63,10 @@ const Portfolio = () => {
 
   const { isDarkMode } = useContext(ModeContext);
   return (
-    <div className={`${isDarkMode && "dark"} mt-5 md:mt-16" id="projects`}>
+    <div
+      className={`${isDarkMode && "dark"} mt-5 md:mt-16" id="projects`}
+      id="projects"
+    >
       <div className="flex justify-center items-center gap-1 text-3xl md:text-6xl py-5 md:py-10 mb-10 dark:text-blue-400">
         <h1 className="">My Projects</h1>
       </div>
