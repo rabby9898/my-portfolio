@@ -66,7 +66,7 @@ const Contact = () => {
                 <input
                   type="text"
                   name="from_name"
-                  className="peer block w-full appearance-none border-0 border-b border-gray-500 dark:border-white bg-transparent py-2.5 px-0 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0"
+                  className="peer block w-full appearance-none border-0 border-b border-gray-500 dark:border-white bg-transparent py-2.5 px-0 text-sm text-gray-900 dark:text-gray-200 focus:border-blue-600 focus:outline-none focus:ring-0"
                   placeholder=" "
                   required
                 />
@@ -78,7 +78,7 @@ const Contact = () => {
                 <input
                   type="text"
                   name="email"
-                  className="peer block w-full appearance-none border-0 border-b border-gray-500 dark:border-white bg-transparent py-2.5 px-0 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0"
+                  className="peer block w-full appearance-none border-0 border-b border-gray-500 dark:border-white bg-transparent py-2.5 px-0 text-sm text-gray-900 dark:text-gray-200 focus:border-blue-600 focus:outline-none focus:ring-0"
                   placeholder=" "
                   required
                 />
@@ -90,7 +90,7 @@ const Contact = () => {
                 <textarea
                   name="message"
                   rows="5"
-                  className="peer block w-full appearance-none border-0 border-b border-gray-500 dark:border-white bg-transparent py-2.5 px-0 text-sm text-gray-900 focus:border-blue-600 focus:outline-none focus:ring-0"
+                  className="peer block w-full appearance-none border-0 border-b border-gray-500 dark:border-white bg-transparent py-2.5 px-0 text-sm text-gray-900 dark:text-gray-200 focus:border-blue-600 focus:outline-none focus:ring-0"
                   placeholder=" "
                   required
                 ></textarea>
