@@ -7,7 +7,7 @@ import { useCallback, useContext } from "react";
 import Particles from "react-tsparticles";
 //import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
 import { loadSlim } from "tsparticles-slim";
-import resume from "../../assets/Resume/resume-fajle-rabby.pdf";
+import resume from "../../assets/Resume/Frontend Developer-mdfajlerabby.pdf";
 import { ModeContext } from "../../Provider/DarkModeProvider";
 const Banner = () => {
   const { isDarkMode } = useContext(ModeContext);
@@ -67,13 +67,13 @@ const Banner = () => {
             experiences, dedicated to continuous learning and professional
             growth.
           </h5>
-          <button className="bg-gray-800 text-white px-8 py-4 my-10  text-lg rounded-md dark:border-[.75px] dark:border-white">
-            <a href={resume} download="resume-fajle-rabby.pdf">
+          <a href={resume} download="resume-fajle-rabby.pdf">
+            <button className="bg-gray-800 text-white px-8 py-4 my-10  text-lg rounded-md dark:border-[.75px] dark:border-white">
               <div className="flex justify-center items-center gap-2 dark:text-gray-200">
                 <FaDownload /> Download Resume
               </div>
-            </a>
-          </button>
+            </button>
+          </a>
         </div>
         <Particles
           id="tsparticles"
